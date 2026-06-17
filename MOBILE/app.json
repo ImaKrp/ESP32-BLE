@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "ESP32 Temp Monitor",
+    "slug": "esp32-temp-monitor",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "scheme": "esp32monitor",
+    "newArchEnabled": true,
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0e1116"
+    },
+    "android": {
+      "package": "com.trabalho.esp32monitor",
+      "minSdkVersion": 29,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0e1116"
+      },
+      "permissions": [
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "ios": {
+      "bundleIdentifier": "com.trabalho.esp32monitor",
+      "infoPlist": {
+        "NSBluetoothAlwaysUsageDescription": "Este app usa Bluetooth para conectar ao ESP32 de monitoramento de temperatura."
+      }
+    },
+    "plugins": [
+      [
+        "react-native-ble-plx",
+        {
+          "isBackgroundEnabled": false,
+          "neverForLocation": true,
+          "bluetoothAlwaysPermission": "Permite conectar ao ESP32 via Bluetooth Low Energy."
+        }
+      ],
+      "expo-dev-client"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "913992e3-9c86-4b01-8ec7-f5343d96741b"
+      }
+    }
+  }
+}
